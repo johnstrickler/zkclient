@@ -46,7 +46,7 @@ public class LazyHostProvider implements HostProvider {
         int tries = 0;
 
         // reload the queue with more resolved addresses?
-        while(resolvedQueue.size() == 0 || tries++ > unresolvedAddresses.length) {
+        while(resolvedQueue.size() == 0 && tries++ < unresolvedAddresses.length) {
 
             // resolve more
             try {
